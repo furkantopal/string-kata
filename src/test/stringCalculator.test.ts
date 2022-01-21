@@ -20,4 +20,8 @@ describe("String Calculator test", () => {
   it("should give the sum of the input string when it has different delimeters", () => {
     expect(stringCalculator.add("//;\n1;2")).toBe(3);
   });
+
+  it("as number are added together, if any number is negative there should be an exception of negatives not allowed ", () => {
+    expect(stringCalculator.add("//;\n1;2?-1")).toThrow("negatives not allowed");
+  });
 });
