@@ -1,13 +1,22 @@
-
-//   //;\n1;2"
-//if start // take 3rd digit as delimeter
 export class StringCalculator {
   add(numbers: string): number {
-    const inputString: string[] = numbers.split("");
-     
+    /*const inputString: string[] = numbers.split("");
+
     console.log(inputString);
+    let delimeter = ",";
+    if (
+      inputString[0] === "/" &&
+      inputString[1] === "/" &&
+      inputString[3] === "\n"
+    ) {
+      delimeter = inputString[2];
+    }
+*/
+    numbers = numbers.replace(/\D/g, "");
+    const inputNumbers: string[] = numbers.split("");
     let sum = 0;
-    inputString.forEach((element) => (sum = sum + +element));
+    inputNumbers.forEach((x) => (sum = sum + +x));
+
     return sum;
   }
 }
