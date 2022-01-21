@@ -1,5 +1,6 @@
-class StringCalculator  { 
-    public Add(): number {
-        return Number;
-    }
+export class StringCalculator {
+  add(numbers: string): number {
+    console.log(+numbers);
+    return +numbers;
+  }
 }
